@@ -3,13 +3,12 @@ from pymoo.problems import get_problem
 from pymoo.util.ref_dirs import get_reference_directions
 from pymoo.visualization.scatter import Scatter
 from pymoo.optimize import minimize
-import matplotlib.pyplot as plt
 
-# 定义问题 zdt1, dtlz1, wfg1
-problem = get_problem("dtlz7")
+# 定义问题
+problem = get_problem("dtlz2", n_obj=3)
 
-# 切比雪夫分解法的参考方向
-ref_dirs = get_reference_directions("das-dennis", 2, n_partitions=99)
+# 生成参考方向
+ref_dirs = get_reference_directions("das-dennis", n_dim=3, n_partitions=12)
 
 # 定义MOEA/D算法
 algorithm = MOEAD(
@@ -28,6 +27,11 @@ res = minimize(
     verbose=True
 )
 
-# 使用 Scatter 绘制 Pareto 前沿，同时结合 matplotlib 添加标题
-Scatter().add(res.F).show()
+# 获取真实 Pareto 前沿
+pareto_front = problem.pareto_front()
 
+# 可视化：绘制真实 Pareto 前沿和算法结果
+plot = Scatter(legend=True, labels=["F1", "F2", "F3"])
+plot.add(pareto_front, color="blue", label="True Pareto Front")
+plot.add(res.F, color="red", label="Algorithm Result")
+plot.show()
