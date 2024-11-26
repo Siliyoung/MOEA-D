@@ -23,7 +23,7 @@ algorithm = MOEAD(
 res = minimize(
     problem,
     algorithm,
-    termination=('n_gen', 250),  # 250代终止
+    termination=('n_gen', 500),  # 500代终止
     seed=1,
     save_history=True,           # 记录优化历史
     verbose=True

@@ -22,7 +22,7 @@ algorithm = MOEAD(
 res = minimize(
     problem,
     algorithm,
-    termination=('n_gen', 250),
+    termination=('n_gen', 500),
     seed=1,
     save_history=True,
     verbose=True

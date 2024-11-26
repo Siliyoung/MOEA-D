@@ -17,7 +17,7 @@ algorithm = SPEA2(
 res = minimize(
     problem,
     algorithm,
-    termination=('n_gen', 250),
+    termination=('n_gen', 500),
     seed=1,
     save_history=True,
     verbose=True
@@ -27,7 +27,7 @@ res = minimize(
 # print("Hypervolume:", res.F)
 
 # 获取zdt问题的真实Pareto前沿
-pareto_front = problem.pareto_front(n_pareto_points=250)
+pareto_front = problem.pareto_front(n_pareto_points=500)
 # 绘制Pareto前沿
 plot = Scatter(legend=True)
 plot.add(pareto_front, color="blue", alpha=0.2, s=50, label="True Pareto Front")

@@ -194,7 +194,7 @@ def MOEAD(N,T):
     pl.show()
 
 if __name__ == '__main__':
-    MOEAD(1250,10)
+    MOEAD(1500,10)
 
 
 

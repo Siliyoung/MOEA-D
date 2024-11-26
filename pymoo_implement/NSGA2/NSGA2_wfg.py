@@ -32,7 +32,7 @@ algorithm = NSGA2(pop_size=100,
 # 执行优化
 res = minimize(problem,
                algorithm,
-               ('n_gen', 250),
+               ('n_gen', 500),
                seed=1,
                verbose=True)
 

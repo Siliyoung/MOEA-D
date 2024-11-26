@@ -16,7 +16,7 @@ algorithm = SPEA2(
 res = minimize(
     problem,
     algorithm,
-    termination=('n_gen', 250),
+    termination=('n_gen', 500),
     seed=1,
     save_history=True,
     verbose=True
@@ -25,7 +25,7 @@ res = minimize(
 # # 输出结果
 # print("Hypervolume:", res.F)
 
-pareto_front = problem.pareto_front(n_pareto_points=250)
+pareto_front = problem.pareto_front(n_pareto_points=500)
 
 # 可视化：绘制真实 Pareto 前沿和优化解
 plot = Scatter(legend=True, labels=["F1", "F2","F3"])

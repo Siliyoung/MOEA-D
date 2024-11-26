@@ -13,7 +13,7 @@ algorithm = GA(pop_size=100)
 res = minimize(
     problem,
     algorithm,
-    termination=('n_gen', 250),
+    termination=('n_gen', 500),
     seed=1,
     verbose=True
 )

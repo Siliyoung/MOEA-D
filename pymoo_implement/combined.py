@@ -20,7 +20,7 @@ ref_dirs = get_reference_directions("das-dennis", 2, n_partitions=12)
 
 # 设置实验参数
 pop_size = 100
-n_gen = 250
+n_gen = 500
 reference_point = np.array([1.1, 1.1])  # 用于计算Hypervolume的参考点
 
 # 定义算法

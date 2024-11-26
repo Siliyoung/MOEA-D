@@ -16,7 +16,7 @@ algorithm = SPEA2(
 res = minimize(
     problem,
     algorithm,
-    termination=('n_gen', 250),
+    termination=('n_gen', 500),
     seed=1,
     save_history=True,
     verbose=True
@@ -28,7 +28,7 @@ res = minimize(
 
 
 # 获取zdt问题的真实Pareto前沿
-pareto_front = problem.pareto_front(n_pareto_points=250)
+pareto_front = problem.pareto_front(n_pareto_points=500)
 
 # 输出结果并绘制三维散点图
 plot = Scatter(legend=True, labels=["F1", "F2", "F3"])
