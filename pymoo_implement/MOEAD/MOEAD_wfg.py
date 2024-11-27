@@ -11,7 +11,7 @@ import os
 # 定义问题，选择一个WFG系列问题，例如 WFG1
 n_var = 12  # 假设问题有 12 个决策变量
 problem_name = "wfg1"
-problem = get_problem(problem_name, n_obj=3, n_var=n_var, k=4)  # 目标数和变量数
+problem = get_problem(problem_name, n_obj=6, n_var=n_var, k=12)  # 目标数和变量数
 
 # 获取WFG问题的真实Pareto前沿
 pareto_front = problem.pareto_front(n_pareto_points=500)

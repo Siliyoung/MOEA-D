@@ -189,8 +189,8 @@ def handle_wfg(problem_name, n_gen,**kwargs):
 
 # 使用示例
 if __name__ == "__main__":
-    # handle_zdt("zdt1", 500)
-    # handle_dtlz("dtlz1", 500)
+    handle_zdt("zdt1", 500)
+    handle_dtlz("dtlz1", 500)
     handle_wfg("wfg1", 500)
     
 

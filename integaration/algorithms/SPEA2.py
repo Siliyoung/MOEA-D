@@ -16,7 +16,7 @@ def save_image(pareto_front, res,path, file_name,labels):
     # 可视化：绘制优化解
     plot = Scatter(legend=True, labels=labels)
     plot.add(pareto_front, color="blue", alpha=0.2, s=50, label="True Pareto Front")
-    plot.add(res.F, color="red", s=10, label="NSGA-II Results")
+    plot.add(res.F, color="red", s=10, label="SPEA2 Results")
     # plot.show()
     # 保存图像：使用算法名和问题名命名文件
     image_filename = os.path.join(path, file_name)
